@@ -1,0 +1,187 @@
+/* reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* variables */
+
+:root {
+    --deep-blue: #072A6C;
+}
+
+/* style */
+
+body {
+    background-image: linear-gradient(135deg, #FFF6B7 10%, #F6416C 100%);
+    min-height: 100vh;
+    font-family: 'Indie Flower', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Kaushan Script', sans-serif;
+    font-size: 70px;
+    padding: 30px;
+    color: var(--deep-blue);
+}
+
+.control-panel,
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+input[type="color"],
+.buttons {
+    margin-bottom: 20px;
+}
+
+/* mode buttons */
+
+button {
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 30px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: transparent;
+    padding: 10px;
+    border: 2px var(--deep-blue) solid;
+    color: var(--deep-blue);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* drawing container */
+
+.grid-container {
+    display: grid;
+    aspect-ratio: 1 / 1;
+    width: 40%;
+    grid-template-columns: repeat(10, 1fr);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.grid-cell {
+    border: 1px solid rgba(255, 255, 255, 0.262);
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.grid-cell:hover {
+    background-color: #F6416C;
+}
+
+/* styling the color picker */
+
+#color-input {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    align-self: center;
+}
+
+#color-input::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+#color-input::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+#color-input:focus {
+    border: 2px solid white;
+    transition: 0.1s ease-in-out;
+}
+
+/* size slider */
+
+label {
+    font-size: 40px;
+    text-align: center;
+    color: var(--deep-blue);
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+/* size slider - thumb */
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border: 3px solid white;
+    outline: none;
+    border-radius: 10px;
+    background: var(--deep-blue);
+    cursor: pointer;
+    margin-top: -10px;
+}
+
+input[type=range]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border: 3px solid white;
+    outline: none;
+    border-radius: 10px;
+    background: var(--deep-blue);
+    cursor: pointer;
+}
+
+/* size slider - track */
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    border-radius: 1.3px;
+    border: 0.2px solid var(--deep-blue);
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    border-radius: 1.3px;
+    border: 0.2px solid var(--deep-blue);
+    background-color: var(--deep-blue);
+}
