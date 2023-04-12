@@ -68,23 +68,19 @@ button:hover {
 
 /* drawing container */
 
-.grid-container {
+#grid-container {
     display: grid;
     aspect-ratio: 1 / 1;
     width: 40%;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     border-radius: 20px;
     overflow: hidden;
 }
 
 .grid-cell {
     border: 1px solid rgba(255, 255, 255, 0.262);
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.709);
     transition: background-color 0.3s ease-in-out;
-}
-
-.grid-cell:hover {
-    background-color: #F6416C;
 }
 
 /* styling the color picker */
@@ -95,8 +91,10 @@ button:hover {
     width: 100px;
     border: none;
     outline: none;
+    appearance: none;
     -webkit-appearance: none;
     align-self: center;
+    cursor: pointer;
 }
 
 #color-input::-webkit-color-swatch-wrapper {
@@ -108,11 +106,10 @@ button:hover {
     border-radius: 50%;
 }
 
-#color-input:focus {
-    border: 2px solid white;
+#color-input:hover {
+    transform: scale(1.1);
     transition: 0.1s ease-in-out;
 }
-
 /* size slider */
 
 label {
@@ -122,6 +119,7 @@ label {
 }
 
 input[type=range] {
+    appearance: none;
     -webkit-appearance: none;
     width: 100%;
     background: transparent;
