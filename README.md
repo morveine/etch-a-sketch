@@ -10,6 +10,7 @@ Done while learning in **The Odin Project**.
 
 * How to get and use data from `input` tags.
 * A performance-friendly way to insert lots of elements into DOM.
+* How to work with different mouse events.
 * How to write HTML that feels even better to work with.
 
 
