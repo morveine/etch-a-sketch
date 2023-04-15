@@ -33,6 +33,7 @@ h1 {
     font-size: 70px;
     padding: 30px;
     color: var(--deep-blue);
+    user-select: none; 
 }
 
 .control-panel,
@@ -60,6 +61,7 @@ button {
     color: var(--deep-blue);
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    user-select: none; 
 }
 
 button:hover {
@@ -116,6 +118,7 @@ label {
     font-size: 40px;
     text-align: center;
     color: var(--deep-blue);
+    user-select: none; 
 }
 
 input[type=range] {
